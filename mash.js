@@ -14,7 +14,17 @@ function mash(){
         let x = car[Math.floor(Math.random()*car.length)];
         return x
     }
-    return "You'll live in a " + getHome() + ", you'll have " + getChildrenCount() + " kids, and you'll drive a " + getCar() + "!"
+    function getCareer(){
+        let career = ["doctor", "lawyer", "engineer", "day laborer", process.argv[5]];
+        let x = career[Math.floor(Math.random()*career.length)];
+        return x
+    }
+    return "You'll live in a " + getHome() + ", you'll have " + getChildrenCount() + " kids, you'll drive a " + getCar() + "and be a " + getCareer() + "!"
 }
 const result = mash();
-console.log(result);
+
+if(process.argv[2] != undefined && process.argv[3] != undefined && process.argv[4] != undefined && processargv[5] != undefined){
+    console.log(result);
+}else{
+    console.log("Please input your preferences in order to get a result.")
+}
